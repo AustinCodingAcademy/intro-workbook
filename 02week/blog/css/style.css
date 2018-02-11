@@ -1,0 +1,42 @@
+body {
+  background: linear-gradient(135deg, rgb(237, 110, 160), rgb(247, 24, 106), rgb(251, 176, 59));
+}
+main {
+  border-bottom: : 1px solid black;
+  width: 700px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+}
+h1 {
+  font-family: 'Lora', serif;
+  color: black;
+  text-align: center;
+}
+article {
+  font-family: 'Lora', serif;
+  background: linear-gradient(135deg, rgb(19, 241, 252), rgb(4, 112, 220));
+  padding: 20px;
+  height: 200px;
+  border-bottom: 1px solid black
+}
+article:nth-child(2n) {
+  background: linear-gradient(135deg, rgb(0, 146, 69), rgb(252, 238, 33), rgb(217, 224, 33));
+}
+.thumbnail {
+  width: 150px;
+  height: 100px;
+  float: right;
+}
+h2::first-letter {
+  color: red;
+  font-size: 30px;
+}
+.date {
+  font-family: 'Lora', serif;
+  color: black;
+}
+.byline {
+  font-family: 'Lora', serif;
+  color: black;
+}

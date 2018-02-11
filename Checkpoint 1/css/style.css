@@ -1,0 +1,123 @@
+/* .boxy {
+  border: 1px solid red;
+} */
+header>img {
+  float: left;
+  margin-top: 10px;
+}
+header {
+  height: 130px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+/* container for links */
+.siteNav {
+  height: 40px;
+  width: 600px;
+  float: right;
+  margin-top: 70px;
+  margin-right: 20px;
+}
+/* siteMenu for links to sections */
+.siteMenu {
+  float: right;
+  margin-top: 15px;
+  font-family: 'Rock Salt', cursive;
+}
+a {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+}
+main {
+  height: 1024px;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Rock Salt', cursive;
+  text-align: center;
+  font-size: 48px;
+  padding-top: 50px;
+}
+h2 {
+  font-family: 'Rock Salt', cursive;
+  text-align: center;
+  padding-top: 30px;
+}
+/* use for all images in sections */
+.contentPics {
+  height: 200px;
+  width: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+  float: left;
+}
+.content {
+  text-align: right;
+  margin-right: 200px;
+  margin-top: 50px;
+  font-family: 'PT Sans', sans-serif;
+}
+#memberships {
+  height: 500px;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(227, 227, 227), rgb(93, 104, 116));
+}
+/* apply to all buttons */
+button {
+  background: linear-gradient(135deg,#F5515F,#A1051D);;
+  margin: 30px;
+  border-radius: 50%;
+  font-family: 'Rock Salt', cursive;
+  padding: 20px;
+  font-size: 16px;
+}
+#classSchedule {
+  height: 500px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+table, th, td {
+  border: 1px solid white;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  padding: 5px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+th {
+  background: linear-gradient(135deg,#F5515F,#A1051D);;
+}
+#aboutUs {
+  height: 400px;
+  width: 100%;
+  background: linear-gradient(135deg, rgb(227, 227, 227), rgb(93, 104, 116));
+}
+#contact {
+  height: 500px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+/* style of map */
+iframe {
+  height: 400px;
+  width: 400px;
+  margin-left: 50px;
+  float: left;
+}
+.form {
+  margin: 50px;
+  float: right;
+  margin-right: 400px;
+}
+input[type=text] {
+  width: 300px;
+}
+input[name=goals] {
+  height: 150px;
+}

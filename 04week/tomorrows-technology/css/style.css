@@ -1,0 +1,101 @@
+#wrapper {
+  display: flex;
+}
+
+header>img {
+  height: 400px;
+  width: 750px;
+  float: left;
+  padding-bottom: 20px;
+}
+
+#tomorrowsTech {
+  width: 750px;
+  font-family: calibri;
+}
+
+#topStories {
+  padding-left: 40px;
+  font-weight: bold;
+  width: 250px;
+  font-family: calibri;
+}
+
+#stories {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid black;
+}
+
+li {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #4C4C4C;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border: none;
+}
+
+footer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #topStories {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  header>img {
+    height: 200px;
+    width: 375px;
+  }
+  #tomorrowsTech {
+    width: 375px;
+  }
+  #wrapper {
+    flex-direction: column;
+  }
+  footer {
+    display: flex;
+    width: 375px;
+    background-color: #4C4C4C;
+    color: white;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-family: calibri;
+  }
+  .footerLinks {
+    list-style: none;
+    padding: 0;
+  }
+  .footerLinks>li {
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+  }
+  /* glowing social media icons https://codepen.io/cool_lazyboy/pen/qXeJOG*/
+  #socialMedia ul li .fa {
+    color: #D8E2DC;
+    transition: all 0.5s ease;
+    float: right;
+  }
+  #socialMedia ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+  }
+  #socialMedia ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+  }
+  #socialMedia ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+  }

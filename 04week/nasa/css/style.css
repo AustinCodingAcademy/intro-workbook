@@ -1,0 +1,61 @@
+
+/* .boxy {
+  border: 1px solid red;
+} */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 794px;
+  width: 850px;
+  justify-content: space-between;
+}
+h1  {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding-top: 165px;
+}
+h2 {
+  padding-left: 20px;
+  width: 270px;
+}
+header {
+  width: 850px;
+  height: 450px;
+  background-image: url("../img/nasa-background.jpg");
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #E6E6E6;
+  font-family: 'Open Sans', sans-serif;
+}
+.agencyInfo {
+  height: 324px;
+  width: 270px;
+}
+p {
+  padding-left: 20px;
+}
+form {
+  padding-left: 20px;
+}
+input[name=name]{
+  width: 200px;
+}
+input[name=message]{
+  height: 67px;
+  width: 200px
+}
+button {
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #4D4D4D;
+  color: white;
+  width: 75px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}

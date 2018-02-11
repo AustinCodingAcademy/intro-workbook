@@ -1,0 +1,82 @@
+.boxy {
+  border: red 1px solid;
+}
+body {
+  background: blue;
+  margin: 0px;
+}
+main {
+  width: 1024px;
+  height: 720px;
+  margin: auto;
+  background-image: url("../img/airline.jpg");
+  background-size: cover;
+}
+header {
+  height: 62px;
+  width: 100%;
+  background-color: #193A55;
+  border-bottom: 1px solid white;
+}
+/* could use header>img as an alternate to class*/
+.logo {
+  float: left;
+  height: 62px;
+  width: auto;
+  margin-left: 55px;
+}
+menu {
+  float: right;
+  width: 450px;
+  height: 24px;
+  padding: 0px;
+  margin-top: 30px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+}
+.menu-icon {
+  float: left;
+  width: 14px;
+  height: 14px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+.content {
+  width: 100%;
+  height: 658px;
+  background-color: #193A55;
+}
+#searchMenu {
+  width: 400px;
+  height: 300px;
+  float: left;
+  margin-left: 100px;
+  margin-top: 150px;
+}
+#search {
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+.tabs {
+  width: 33%;
+  height: 80px;
+  float: left;
+}
+
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+
+.tabs img {
+  margin-left: 40px;
+  margin-top: 15px;
+}
