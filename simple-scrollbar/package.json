@@ -1,0 +1,50 @@
+{
+  "_from": "simple-scrollbar@^0.4.0",
+  "_id": "simple-scrollbar@0.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-mK4cZtoa7UdmwxxMT44kXF3SdNs+Ml/IiFTML0wDJpDi3zVRevlkiJcrZJ7vVyTKUw6OmDyijdNJecHpnd5y3w==",
+  "_location": "/simple-scrollbar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "simple-scrollbar@^0.4.0",
+    "name": "simple-scrollbar",
+    "escapedName": "simple-scrollbar",
+    "rawSpec": "^0.4.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.4.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/simple-scrollbar/-/simple-scrollbar-0.4.0.tgz",
+  "_shasum": "cd0b7a4f8dcf7c0bb8d4c83b0ac5b0acebf2579b",
+  "_spec": "simple-scrollbar@^0.4.0",
+  "_where": "C:\\Users\\andyo\\workspace\\web-workbook",
+  "author": {
+    "name": "Vitor Buzinaro"
+  },
+  "bugs": {
+    "url": "https://github.com/buzinas/simple-scrollbar/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Very simple vanilla javascript library for creating a custom scrollbar cross-browser and cross-devices.",
+  "homepage": "https://github.com/buzinas/simple-scrollbar#readme",
+  "keywords": [
+    "scrollbar",
+    "custom-scrollbar",
+    "tiny-scrollbar",
+    "simple-scrollbar",
+    "vanilla-js"
+  ],
+  "license": "MIT",
+  "main": "simple-scrollbar.js",
+  "name": "simple-scrollbar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buzinas/simple-scrollbar.git"
+  },
+  "version": "0.4.0"
+}

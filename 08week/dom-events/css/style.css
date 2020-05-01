@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  color: red;
+  font-size: 2rem;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-main {
+  width: 100%;
+  height: 100%;
+}
+
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  color: #e7e5df;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.box:hover {
+  border: 2px solid #e7e5df;
+}
+
+#counter-1 {
+  background-color: #e74c3c;
+}
+#counter-10 {
+  background-color: #0077c0;
+}
+#counter-100 {
+  background-color: #0eac51;
+}
+#counter-all {
+  background-color: #f1892d;
+}
+#reset {
+  background-color: #707070;
+}

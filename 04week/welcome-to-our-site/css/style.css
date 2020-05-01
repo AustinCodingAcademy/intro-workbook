@@ -1,0 +1,72 @@
+body {
+  font-family: 'Merriweather', serif;  
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  padding: 10em 5em;
+  background: #2bcdc0;
+  color: white;
+}
+.welcome h1 {
+  font-size: 3rem;
+}
+.welcome span {
+  font-weight: 700;
+}
+
+.titles {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  background: #303030;
+  color: white;
+}
+
+.text-block {
+  padding: 2em;
+  width: 18%;
+  max-width: 200px;
+  text-align: center;
+}
+.text-block::before {
+  content: '';
+  display: block;
+  margin: 1em auto;
+  height: 25px;
+  width: 95%;
+  background-color: white;
+}
+.text-block.one::before {background-color: #33a8dd;}
+.text-block.two::before {background-color: #f46731;}
+.text-block.three::before {background-color: #2bcdc0;}
+
+
+@media (max-width: 750px) {
+  .welcome {
+    background: #33a8dd
+  }
+  .titles {
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    color: black;
+  }
+  .text-block {
+    width: 60%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding-top: 3em;
+  }
+}

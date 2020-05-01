@@ -1,0 +1,104 @@
+body {
+  background: #000;
+  color: #C0C0C0;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hero::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,.2),rgba(0,0,0,.1)), url(../img/bg3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  transition: all 1000ms;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 10rem;
+  transition: all ease-in-out 300ms;
+}
+.content.nav-open {
+  opacity: 0;
+  z-index: -1;
+}
+.content #hello {
+  font-size: 2.5rem;
+  color: #D73C2C;
+  font-weight: 300;
+}
+.content #title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+.content .text {
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1000ms;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+}
+.fade-in.one {
+  animation-delay: 500ms;
+}
+.fade-in.two {
+  animation-delay: 3000ms;
+}
+
+@media screen and (max-width: 1030px) {
+  .content {
+    left: 5rem;
+  }
+  .nav-title {
+    display: flex;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .nav-toggler {
+    display: block;
+  }
+  .nav-menu {
+    height: 100%;
+    width: 250px;
+    transform: translateX(-250px);  
+  }
+  .nav-menu.nav-open {
+    transform: translatex(0);
+    border-right: 1px solid rgba(0,0,0,.3);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    left: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .content {
+    left: 1rem;
+  }
+}

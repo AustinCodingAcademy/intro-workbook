@@ -1,11 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-blend-mode: normal, lighten, soft-light;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#board {
+  border: solid 4px #303030;
+}
+
 div[data-cell] {
   width: 100px;
   height: 100px;
-  background-color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.10);
+  color: #e0e0e0;
   float: left;
-  border: 1px solid #808080;
+  border: 1px solid #303030;
   font-size: 100px;
   text-align: center;
+  user-select: none;
+}
+div[data-cell]:hover {
+  background-color: rgba(0, 0, 0, 0.50);
+}
+
+div[data-cell].color1 {
+  color: #E74C3C;
+}
+div[data-cell].color2 {
+  color: #0077C0
 }
 
 .row {

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+
+/* --------------------------------------------------------- */
+/* Changes to current page style to accomodate nav-menu */
+body {
+  overflow-x: hidden;
+}
+main {
+  transform: translateX(0);
+}
+main.body-open {
+  transform: translateX(225px);
+}
+/* ----------------------------------- */
+/* nav-menu header */
+.nav-container { 
+  position: relative;
+}
+.nav-title {
+  display: flex;
+  color: #E0E0E0;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  padding: 1rem 0;
+  padding-left: 10px;
+}
+.nav-title:hover,
+.nav-title:focus {
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-home {
+  color: #E0E0E0;
+  text-decoration: none;
+  outline: none;  
+  margin-left: .625rem;
+}
+.nav-home:hover,
+.nav-home:focus {
+  color: hsl(5, 48%, 51%);
+}
+
+.nav-open-close-all {
+  font-size: 1rem;
+  right: 22px;
+  text-align: right;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  color: #E0E0E0;
+  cursor: pointer;
+}
+.nav-open-close-all::before {
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  font-size: 1.3rem;
+  content: "\f103";
+}
+.nav-open-close-all.closed::before {
+  content: "\f101";
+}
+
+.nav-toggler {
+  position: fixed;
+  opacity: .3;
+  top: .5rem;
+  left: .5rem;
+  cursor: pointer;
+  z-index: 100;
+  background: #303030;
+  padding: 0 .3rem;
+  border-radius: 3px;
+  transform: scale(1.4);
+}
+.nav-toggler:hover {
+  opacity: 1;
+}
+.nav-toggler.nav-open {
+  transform: translateX(205px);
+  opacity: 1;
+}
+
+.bar1, .bar2, .bar3 {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 1.2rem;
+  margin: 4px 0;
+  border-radius: 3px;
+  background: #E0E0E0;
+}
+.nav-open .bar1 {transform: translateY(14px) translateY(-7px) rotateZ(45deg);}
+.nav-open .bar2 {width: 0}
+.nav-open .bar3 {transform: translateY(-14px) translateY(7px) rotateZ(-45deg);}
+
+
+/* ----------------------------------- */
+/* nav-menu main */
+.nav-menu {
+  background-color: #303030;
+  z-index: 1;
+  position: fixed;
+  width: 250px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  margin-right: 10px;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+  font-weight: lighter;
+  height: 100%;
+  transform: translateX(-250px);
+}
+.nav-menu.nav-open {
+  transform: translatex(0);
+  border-right: 1px solid rgba(0,0,0,.3);
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0,0,0,.3);
+}
+.dropdown:last-of-type {
+  border-bottom: 1px solid rgba(0,0,0,.3);
+}
+
+.dropdown button {
+  text-align: left;
+  outline: none;    
+}
+.dropdown button::before,
+.dropdown.open button::before,
+.dropdown.current-dropdown button::after {
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  margin-right: .2rem;
+}
+.dropdown button::before {
+  content: "\f105";
+}
+.dropdown.current-dropdown button::before {
+  color: hsl(5, 48%, 51%);
+}
+.dropdown.open button::before {
+  content: "\f107";
+  font-style: normal;
+}
+
+.dropdown-content {
+  overflow: hidden;
+  display: none;
+}
+.dropdown-content.open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.week,
+.nav-link {
+  padding: 1rem 0;
+  display: block;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #E0E0E0;
+  outline: none;
+  cursor: pointer;
+}
+.week {
+  padding-left: 10px;
+}
+.week:hover,
+.week:focus {
+  background: rgba(255,255,255,0.1);
+}
+.nav-link {
+  font-size: 1rem;
+  display: block;
+  padding: .5rem;
+}
+.nav-link:hover,
+.nav-link:focus {
+  transform: translateX(10px);
+  cursor: pointer;
+}
+
+.nav-link.current-page {
+  color: hsl(5, 48%, 51%);
+}
+
+/* TRANSITION CLASSES */
+.transition-transform {
+  transition: transform 250ms ease-in-out;
+}
+.transition-all {
+  transition: all 200ms ease-in-out;
+}
+
+/* Scrollbar */
+.ss-scroll {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: default;
+}

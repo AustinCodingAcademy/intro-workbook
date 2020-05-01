@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  overflow-x: hidden;
+  text-align: center;
+  font-size: 2rem;
+  background: #485563;
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  background: linear-gradient(to right, #29323c, #485563);
+}
+main {
+  width: 100vw;
+  height: 100vh;
+}
+.container-main {
+  width: 100%;
+  height: 100%;
+}
+.container-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  min-width: 480px;
+  margin: 0 auto;
+}
+.title {
+  color: #e7e5df;
+}
+.unselectable {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.announce {
+  display: none;
+}
+.announce.show {
+  display: block;
+}
+#anvil {
+  position: relative;
+  display: flex;
+  transition: 100ms ease-in-out;
+}
+#anvil.shake {
+  animation: shake 0.1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+#hammer {
+  margin: 0 80px -55px 0;
+  align-self: flex-end;
+  transition: 50ms ease-in-out;
+}
+#hammer img {
+  transform: scale(0.7);
+}
+#hammer.swing {
+  animation: swingUp 100ms;
+}
+#hammer.swing.down {
+  animation: swingDown forwards 100ms;
+}
+#counter {
+  position: absolute;
+  padding: 1rem 0 0 2rem;
+  top: 0;
+  left: 0;
+  color: #e7e5df;
+  font-size: 3rem;
+}
+#currency {
+  position: absolute;
+  padding: 1.8rem 0 0 2rem;
+  top: 50px;
+  left: 0;
+}
+#currency p {
+  font-size: 1rem;
+  color: #e7e5df;
+  margin: 0;
+}
+#next-weapon-level {
+  position: absolute;
+  padding: 1rem 0 0 2rem;
+  top: 0;
+  color: #e7e5df;
+  font-size: 1rem;
+}
+#current-upgrades {
+  position: absolute;
+  padding: 1rem 0 0 2rem;
+  top: 180px;
+  left: 0;
+  font-size: .8rem;
+}
+#current-upgrades ul {
+  margin: 0;
+  padding: 0;
+  color: #e7e5df;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#current-upgrades p {
+  margin: 0;
+  text-align: left;
+}
+#current-upgrades .upgrade {
+  margin-top: .5rem;
+}
+#player-stats {
+  position: absolute;
+  padding: 1rem 0 0 2rem;
+  top: 400px;
+  left: 0;
+  font-size: .8rem;
+}
+#player-stats p {
+  color: #e7e5df;
+  text-align: left;
+  margin: 0;
+}
+#apprentice-stats {
+  position: absolute;
+  padding: 1rem 0 0 2rem;
+  top: 500px;
+  left: 0;
+  font-size: .8rem;
+}
+#apprentice-stats p {
+  color: #e7e5df;
+  text-align: left;
+  margin: 0;
+}
+#weapon {
+  padding: 1rem 0 0 2rem;
+  top: 50%;
+  left: 0;
+  color: #e7e5df;
+  font-size: 1.2rem;
+}
+.hidden {
+  display: none;
+}
+#shop {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  min-height: 200px;
+}
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  color: #e7e5df;
+  border: solid 2px #e7e5df;
+  background: rgba(50, 50, 50, 0.5);
+}
+.shop:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.shop p {
+  opacity: .25;
+}
+
+.shop.unlocked p {
+  opacity: 1;
+}
+
+.shop-name,
+.shop-cost {
+  font-size: 0.6rem;
+  align-self: center;
+}
+
+.shop-name {
+  padding-left: 10px;
+  line-height: 2;
+}
+
+.shop-cost {
+  color: #e7e5df;
+}
+.shop-cost.red {
+  color: #E74C3C;
+}
+.shop-cost.green {
+  color: #0EAC51;
+}
+
+#log {
+  color: #e7e5df;
+  font-size: 1.5rem;
+}
+
+/* ANVIL HIT ANIMATION */
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, -1px, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(0, 2px, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -4px 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+/* HAMMER SWING ANIMATIONS */
+@keyframes swingDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg) translate(-10px, -40px);
+  }
+}
+@keyframes swingUp {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+}
+/* SPARK ANIMATION */
+@keyframes spark {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+    transform: translate(-80px, -30px) rotate(-65deg);
+    filter: blur(1px);
+  }
+}

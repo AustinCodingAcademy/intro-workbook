@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Checkpoint 2 - Portfolio</title>
+  <meta name="description" content="A personal portfolio website">
+  <meta name="author" content="Andy Olson">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- FONTAWESOME CDN
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onresize="recalcHeights()">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <main>
+    <!-- header begin -->
+    <header>
+
+      <nav class="nav-container">
+        <div class="nav-title-container">
+          <a id="nav-name" class="nav-title" href="#">Andy Olson</a>
+        </div>
+        <div class="nav-items">
+          <div><a id="nav-work" class="nav-item" href="#work">Work</a></div>
+          <div><a id="nav-about" class="nav-item" href="#about">About</a></div>
+          <div><a id="nav-contact" class="nav-item" href="#contact">Contact</a></div>
+        </div>
+      </nav>
+
+    </header>
+    <!-- header end -->
+
+
+    <!-- hero section begin -->
+    <section class="hero">
+
+      <div class="hero-content">
+        <h1 class="hero-text"><span>Andy</span> Olson</h1>
+        <h2><span>Web Developer</span></h2>
+      </div>
+
+    </section>
+    <!-- hero section end -->
+
+    <div class="site-wrapper">
+
+      <!-- work section begin -->
+      <section class="work">
+
+        <div id="work" class="section-img">
+          <img src="img/work.png" alt="a drawing of a computer and phone" title="Icon made by https://www.flaticon.com/authors/freepik">
+        </div>
+        <h1>My Work</h1>
+
+        <div class="container work-item-container">
+
+          <!-- work item one -->
+          <div class="work-item one">
+            <img src="img/work-item1.jpg" alt="work-item">
+            <div class="work-item-overlay">
+              <div class="btn-background">
+                <a class="work-item-btn" href="https://andyols.github.io/web-workbook/" target="_blank">View Project</a>
+              </div>
+            </div>
+            <div class="work-item-info">
+              <p class="work-item-title">Web Workbook</p>
+            </div>
+          </div>
+
+          <!-- work item two -->
+          <div class="work-item two">
+            <img src="img/work-item2.jpg" alt="work-item">
+            <div class="work-item-overlay">
+              <div class="btn-background">
+                <a class="work-item-btn" href="https://andyols.github.io/checkpoint1/" target="_blank">View Project</a>
+              </div>
+            </div>
+            <div class="work-item-info">
+              <p class="work-item-title">Business Site</p>
+            </div>
+          </div>
+
+          <!-- work item three -->
+          <div class="work-item three">
+            <img src="img/work-item3.jpg" alt="work-item">
+            <div class="work-item-overlay">
+              <div class="btn-background">
+                <a class="work-item-btn" href="https://andyols.github.io/web-workbook/checkpoint3/index.html" target="_blank">View
+                  Project</a>
+              </div>
+            </div>
+            <div class="work-item-info">
+              <p class="work-item-title">Clicker Game</p>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+      <!-- work section end -->
+
+
+      <!-- about section begin -->
+      <section class="about">
+
+        <div id="about" class="section-img">
+          <img src="img/about.png" alt="a drawing of a phone" title="Icon made by https://www.flaticon.com/authors/freepik">
+        </div>
+        <h1>A Little About Me</h1>
+
+        <div class="container about-container">
+
+          <div class="about-block">
+            <p class="about-header">Hi, I'm Andy Olson.</p>
+            <p class="about-text">I am a student web developer currently attending Austin Coding Academy. My work, so
+              far, has taught me the fundamentals of web development (HTML5, CSS3, JS).
+              I am planning on delving deeper into JavaScript by learning JS libraries such as jQuery to solidify my
+              knowledge on front-end web development.
+            </p>
+            <p class="about-text">The ultimate goal, however, is to become a full stack developer so I will also be
+              looking to formalize my back end developement skill set in time.
+            </p>
+          </div>
+
+          <div class="about-block">
+            <p class="about-header">TL;DR</p>
+            <p class="about-text">Fundamentals in: </p>
+            <ul>
+              <li>
+                <p class="about-text">UX/UI Design</p>
+              </li>
+              <li>
+                <p class="about-text">HTML, CSS, and JS</p>
+              </li>
+              <li>
+                <p class="about-text">Eager to learn more!</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- about section end -->
+
+
+      <!-- contact section begin -->
+      <section class="contact">
+
+        <div id="contact" class="section-img">
+          <img src="img/contact.png" alt="a drawing of a hand holding a phone" title="Icon made by https://www.flaticon.com/authors/smashicons">
+        </div>
+        <h1>Get In Touch</h1>
+
+        <div class="container contact-container">
+          <div class="contact-container-inner">
+            <input class="contact-input" type="text" name="fname" placeholder="Name?">
+            <input class="contact-input" type="text" name="lname" placeholder="Email?">
+            <textarea class="contact-text-area" name="message" id="contact-text" placeholder="A brief message..."></textarea>
+            <input class="contact-btn" type="submit" value="Submit">
+          </div>
+        </div>
+
+      </section>
+      <!-- contact section end -->
+
+      <div class="btn-container">
+        <a href="#" id="to-top" title="To Top"><i class="fa fa-angle-up"></i></a>
+      </div>
+
+    <!-- site wrapper end -->
+    </div>
+
+
+    <!-- footer begin -->
+    <footer>
+      <div class="footer-container">
+        <div class="social-links">
+          <div><a class="social-link" href="https://www.linkedin.com/in/andy-olson-2a250116a/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+          <div><a class="social-link" href="mailto:andyolson09@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></div>
+          <div><a class="social-link" href="https://github.com/andyols" target="_blank"><i class="fab fa-github"></i></a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+  </main>
+
+
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="module" src="js/jump.mjs"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+
+</html>

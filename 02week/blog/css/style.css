@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 175ms;
+}
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #3498DB;
+}
+
+/*    +===================+
+    /   Global          /
+  +===================+ 
+*/
+.container {
+  max-width: 60vw;
+  min-height: 100%;
+  margin-top: 0;
+  margin-bottom: -50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    max-width: 97vw;
+  }
+}
+
+/*    +=================+
+    /   Header        /
+  +=================+ 
+*/
+.logo {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #3498DB;
+  text-shadow: 1px 2px 1px #4d4d4d;
+  font-size: 122px;
+}
+.page-title {
+  margin: 0;
+  padding: 0;
+  font-variant: small-caps;
+}
+header {
+  background-color: #E0E0E0;
+  padding: .1em;
+  margin-bottom: .5em;
+  text-align: center;
+  box-shadow: 0 0 4em 0 rgba(0,0,0,.3);
+}
+header nav {
+  min-width: 100vw;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header nav li {
+  display: inline-block;
+  margin: 1em;
+}
+header nav a {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .9rem;
+  color: #000;
+}
+header nav a:hover,
+header nav a:focus {
+  color: #9B59B6;
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    text-align: center;
+  }
+  header nav ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+  header nav ul a {
+    margin: 0 auto;
+    font-size: .6rem;
+  }
+  header nav li {
+    margin: .8em;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .logo {
+    font-size: 75px;
+  }
+}
+/*    +=================+
+    /   Blog Posts    /
+  +=================+ 
+*/
+.blog-clickable {
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+.blog-entry {
+  max-width: 600px;
+  background-color: #E0E0E0;
+  padding: .5em;
+  border: .5px solid #3498DB;
+  border-radius: 5px;  
+}
+.blog-entry:hover {
+  border: 1px solid #000;
+  transform: scale(1.05);
+  transition-duration: 20ms;
+  box-shadow: 0 0 4em 0 rgba(0,0,0,.3);
+}
+.keyword {
+  color: #3498DB;
+}
+.blog-entry:hover .keyword,
+.blog-entry:focus .keyword {
+  color: #9B59B6;
+}
+.blog-clickable:last-of-type {
+  margin-bottom: .5em;
+}
+.entry-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.entry-origin {
+  margin-top: 0;
+  margin-left: 1px;
+  color: #707070;
+  font-style: italic;
+  font-size: .8rem;
+}
+.entry-desc {
+  margin-bottom: 1px;
+  font-size: .9rem;
+  color: #000;
+}
+
+@media screen and (max-width: 425px) {
+  .blog-entry {
+    padding: .3em;
+  }
+  .entry-title {
+    font-size: .9rem;
+  }
+  .entry-desc,
+  .entry-origin {
+    font-size: .6rem;
+  }
+}
+
+/*    +=================+
+    /   Buttons       /
+  +=================+ 
+*/
+.btn-to-top {
+  display: block;
+  position: relative;
+  float: right;
+  width: 50px;
+  height: 50px;
+  bottom: 60px;
+  right: 10px;
+  color: #E0E0E0;
+  border: 4px solid #E0E0E0;
+  border-radius: 96%;
+  text-align: center;
+  font-size: 24px;
+  border-color: rgba(255,255,255,.3) #E0E0E0 rgba(255,255,255,.3) #E0E0E0;
+}
+.btn-to-top:hover {
+  transform: scale(1.1);
+  border-color: rgba(255,255,255,.3) #9B59B6 rgba(255,255,255,.3) #9B59B6;
+}
+.btn-to-top i {
+  line-height: 40px;
+}
+
+@media screen and (max-width:768px) {
+  .btn-to-top {
+    display: none;
+  }
+}
+
+/*    +=================+
+    /   Footer        /
+  +=================+ 
+*/
+.push {
+  height: 50px;
+}
+footer {
+  min-height: 50px;
+  background: #E0E0E0;
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 4em 0 rgba(0,0,0,.3);
+}
+.social-media {
+  margin: 0 auto;
+  padding: 0;
+}
+.social-media li {
+  display: inline-block;
+  padding: .75em;
+}
+.social-media a {
+  font-size: 175%;
+  text-decoration: none;
+  color: #000;
+}
+.social-media li a i:hover {
+  color: #3498DB;
+  text-shadow: 3px 4px 1px #4d4d4d;
+}
+
+@media screen and (max-width: 425px) {
+  .social-media li {
+    padding: .5em;
+  }
+  .social-media li a i {
+    transform: scale(0.75);
+  }
+}

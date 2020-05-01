@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Clicker Game</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+  <!-- FONTAWESOME CDN
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../img/clicker-favicon.png">
+
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <main>
+    <div class="container-main">
+      <div class="container-inner">
+        <div id="counter" class="unselectable">0xp</div>
+        <div id="currency">
+          <p id="currency-text" class="unselectable"><img id="currency-img" draggable="false" src="img/gold.png" alt="a pile of gold">
+            0</p>
+        </div>
+        <div id="current-upgrades" class="unselectable">
+          <ul>
+            <p>Current Upgrades:</p>
+            <p>-----------------</p>
+          </ul>
+        </div>
+        <div id="player-stats" class="unselectable stats">
+          <p>Player Stats:</p>
+          <p>-------------</p>
+          <p id="dynamic-player-stats">xp/click: </p>
+        </div>
+        <div id="apprentice-stats" class="unselectable stats hidden">
+          <p>Apprentice Stats:</p>
+          <p>----------------</p>
+          <p id="dynamic-apprentice-stats">xp/sec: </p>
+        </div>
+        <p id="next-weapon-level"></p>
+        <div id="weapon" class="unselectable">
+          <img class="hidden" id="weapon-img" src="/">
+          <p class="announce" id="max-level">MAX LEVEL</p>
+        </div>
+        <div id="hammer" class="unselectable swing"><img draggable="false" src="img/hammer.png" alt="a hammer"></div>
+        <div id="anvil" class="unselectable">
+          <img draggable="false" src="img/anvil.png" alt="an anvil">
+        </div>
+        <p class="title">Shop</p>
+        <div id="shop" class="unselectable">
+          <div class="shop five unlocked" id="hammer-upgrade-1">
+            <p class="shop-name">Hammer Upgrade 1</p>
+            <p class="shop-cost"></p>
+          </div>
+          <div class="shop six" id="hammer-upgrade-2">
+            <p class="shop-name">Hammer Upgrade 2</p>
+            <p class="shop-cost"></p>
+          </div>
+          <div class="shop seven" id="hammer-upgrade-3">
+            <p class="shop-name">Hammer Upgrade 3</p>
+            <p class="shop-cost"></p>
+          </div>
+          <div class="shop eight" id="hammer-upgrade-4">
+            <p class="shop-name">Dual Wield Hammers</p>
+            <p class="shop-cost"></p>
+          </div>
+          <div class="shop one" id="hire-apprentice">
+            <p class="shop-name">Hire Apprentice</p>
+            <p class="shop-cost"></p>
+          </div>
+          <div class="shop two" id="apprentice-upgrade-1">
+            <p class="shop-name">Apprentice Upgrade 1</p>
+            <p class="shop-cost"></p>
+          </div>
+          <div class="shop three" id="apprentice-upgrade-2">
+            <p class="shop-name">Apprentice Upgrade 2</p>
+            <p class="shop-cost"></p>
+          </div>
+          <div class="shop four" id="apprentice-upgrade-3">
+            <p class="shop-name">Apprentice Upgrade 3</p>
+            <p class="shop-cost"></p>
+          </div>
+        </div>
+        <div>
+        </div>
+        <p id="log"></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>

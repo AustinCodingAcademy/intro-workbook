@@ -1,1 +1,332 @@
+/* 
+* ===== Global Styles ===== 
+*/
 
+* {
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  background: #34495e;
+  color: #303030;
+}
+
+p, h1 {
+  margin: 0;
+}
+
+
+/* 
+* ===== Header ===== 
+*/
+
+header {
+  text-align: center;
+}
+
+.title {
+  color: #ecf0f1;
+  font-size: 2.8rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.subtitle {
+  color: #bdc3c7;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+.subtitle.mobile { display: none; }
+.subtitle.tablet { display: none; }
+.subtitle.desktop { display: none; }
+
+
+/* 
+* ===== Box Styles ===== 
+*/
+
+.box {
+  background: #ecf0f1;
+  border-radius: 4px;
+  padding: .5rem;
+  overflow: hidden;
+  opacity: .75;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 55% 35% 40px;
+  grid-template-areas: 
+    "img"
+    "text"
+    "buttons";
+}
+.box:hover {
+  box-shadow: 0px 2px 13px 1px rgba(0, 0, 0, 0.33);
+  opacity: 1;
+}
+
+.box .box-label {
+  font-weight: 600;
+}
+
+.box .content {
+  border-radius: 4px;
+}
+
+
+/*
+* — Grid Setup —
+*/
+
+.a { grid-area: a; }
+.b { grid-area: b; }
+.c { grid-area: c; }
+.d { grid-area: d; }
+.e { grid-area: e; }
+.f { grid-area: f; }
+.g { grid-area: g; }
+.h { grid-area: h; }
+.i { grid-area: i; }
+.j { grid-area: j; }
+
+.grid-container {
+  display: grid;
+  gap: .625rem;
+  margin: 1rem 1rem;
+}
+
+
+/*
+* — Box Images —
+*/
+
+.content.img { 
+  background: #BDC3C7;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-area: img;
+}
+.a>.content.img { background-image: url(../img/landscape01.jpg) }
+.b>.content.img { background-image: url(../img/landscape02.jpg) }
+.c>.content.img { background-image: url(../img/landscape03.jpg) }
+.d>.content.img { background-image: url(../img/landscape04.jpg) }
+.e>.content.img { background-image: url(../img/landscape08.jpg) }
+.f>.content.img { background-image: url(../img/landscape06.jpg) }
+.g>.content.img { background-image: url(../img/landscape07.jpg) }
+.h>.content.img { background-image: url(../img/landscape05.jpg) }
+.i>.content.img { background-image: url(../img/landscape09.jpg) }
+.j>.content.img { background-image: url(../img/landscape10.jpg) }
+
+.content.text { 
+  margin: 0;
+  margin-top: .5rem;
+  overflow-y: auto;
+  grid-area: text;
+}
+
+.box .button-container {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-top: .5rem;
+  grid-area: buttons;
+}
+.button-container .btn {
+  border-radius: 4px;
+  background: #e67e22;
+  border: none;
+  height: 100%;
+}
+.button-container .btn:hover,
+.button-container .btn:focus {
+  background: #bdc3c7;
+}
+.button-container .btn-small { 
+  width: 32px; 
+  border-radius: 50%;
+}
+.button-container .btn-large { width: 85px; }
+
+/* 
+* ===== Media Queries ===== 
+*/
+
+/* Smartphones */
+@media screen and (max-width: 599px) {
+  .subtitle.mobile { display: block; }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 400px);
+    grid-template-areas: /* Mobile Layout */
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h"
+      "i"
+      "j";
+  }
+}
+
+/*  Tablet+ */
+@media (min-width: 600px) {
+  .subtitle.tablet { display: block; }
+  .box { 
+    grid-template-rows: 45% 35% 30px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40vh 30vh repeat(4, 20vh);
+    grid-template-areas: /* Tablet Layout */
+      "a a a a"
+      "b b c c"
+      "d d d d"
+      "e e f f"
+      "g h h h"
+      "i i i j";
+  }
+
+
+  /*
+  * — Specific grid changes for box content on tablets —
+  */
+
+  .a {
+    grid-template-rows: 70% 18% 40px;
+  }
+  .b, .c {
+    grid-template-rows: 50% 35% 40px;
+  }
+  .d,.e,.f,.h,.i {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 40% 45% 30px;
+    grid-template-areas: 
+      "img text"
+      "img text"
+      "img buttons";
+    padding-bottom: 1rem;
+  }
+  .g,.j {
+    grid-template-rows: 45% 35% 30px;
+    grid-template-areas: 
+      "img"
+      "img"
+      "img"
+  }
+
+  .g .content.text,
+  .j .content.text {
+    display: none;
+  }
+  .d .content.text, 
+  .e .content.text,
+  .f .content.text, 
+  .h .content.text, 
+  .i .content.text {
+    margin-top: 0;
+    margin-left: .5rem;
+  }
+
+  .d .button-container,
+  .e .button-container,
+  .f .button-container,
+  .h .button-container,
+  .i .button-container {
+    margin-left: .5rem;
+  }
+  .g .button-container,
+  .j .button-container {
+    display: none;
+  }
+  .d .button-container .btn-small,
+  .e .button-container .btn-small, 
+  .f .button-container .btn-small, 
+  .g .button-container .btn-small,
+  .h .button-container .btn-small, 
+  .i .button-container .btn-small {
+    width: 22px;
+  }
+}
+
+/* Desktop+ */
+@media screen and (min-width: 1200px) {
+  .subtitle.tablet { display: none; }
+  .subtitle.desktop { display: block; }
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 25vh 30vh 20vh 35vh;
+    grid-template-areas: /* Desktop Layout */
+      "a a a a b b b b"
+      "c c c c d d e e"
+      "c c c c f f f f"
+      "g g h h i i j j";
+  }
+
+  /*
+  * — Specific grid changes for box content on desktop —
+  */
+
+  .a, .b {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 80% 40px;
+    grid-template-areas: 
+      "img text"
+      "img buttons";
+  }
+  .c {
+    grid-template-rows: 76% 15% 40px;
+  }
+  .d,.e,.g,.h,.i,.j {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 92% 30px;
+    grid-template-areas: 
+      "img img"
+      "buttons buttons";
+    padding-bottom: 1rem;
+  }
+  .f {
+    grid-template-rows: 105%;
+    grid-template-areas: 
+      "img text";
+  }
+
+  .a .content.text,
+  .b .content.text {
+    margin-left: .5rem;
+  }
+  .d .content.text,
+  .e .content.text,
+  .g .content.text,
+  .h .content.text,
+  .i .content.text,
+  .j .content.text {
+    display: none;
+  }
+  
+  .a .button-container,
+  .b .button-container {
+    margin-left: .5rem;
+  }
+  .f .button-container {
+    display: none;
+  }
+  .d .button-container,
+  .e .button-container, 
+  .g .button-container,
+  .h .button-container,
+  .i .button-container,
+  .j .button-container {
+    display: flex;
+    margin-left: 0;
+  }
+  .j .button-container .btn-small {
+    width: 22px;
+  }
+}
